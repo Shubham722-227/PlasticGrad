@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PlastiGrad</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: green;
+            text-align: center;
+            margin-top: 100px;
+            font-weight: bold;
+            font-size: 60px; /* Increased font size for the title */
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 50px auto;
+            border: 2px solid #0066cc; /* Added border to the table */
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .search-box {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .search-input {
+            padding: 12px; /* Increased padding for the search input */
+            font-size: 20px; /* Increased font size for the search input */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 4px;
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: #0066cc;
+            box-shadow: 0 0 8px #0066cc;
+        }
+        .search-submit {
+            padding: 12px 24px; /* Increased padding for the search submit button */
+            font-size: 20px; /* Increased font size for the search submit button */
+            border: none;
+            border-radius: 4px;
+            background-color: #0066cc;
+            color: #fff;
+            cursor: pointer;
+        }
+        .search-submit:hover {
+            background-color: #0052b3;
+        }
+        .search-submit:focus {
+            outline: none;
+            box-shadow: 0 0 8px #0066cc;
+        }
+    </style>
+</head>
+<body>
+    <h1>PlastiGrad</h1>
+    <div class="search-box">
+        <form action="/" method="post">
+            <label for="search_option">Search By:</label>
+            <select name="search_option" id="search_option" class="search-input">
+                <option value="Microorganism">Microorganism</option>
+                <option value="Plastic">Plastic</option>
+                <option value="Enzyme">Enzyme</option>
+            </select>
+            <input type="text" name="search_value" class="search-input" placeholder="Enter the search term">
+            <input type="submit" value="Search" class="search-submit">
+        </form>
+    </div>
+    {% if parts_table %}
+    <table>
+        <tr>
+
+            <th>Tax ID</th>
+            <th>Plastic</th>
+            <th>Ref</th>
+            <th>Enzyme</th>
+            <th>Enzyme ID</th>
+            <th>Database Enzyne Name</th>
+            <th>Gene</th>
+            <th>GenbankID</th>
+            <th>Sequence</th>
+            <th>Year</th>
+            <th>Evidence</th>
+            <th>Plastic used</th>
+            <th>Manufacturer</th>
+            <th>Analitical grade</th>
+            <th>Thermophilic conditions</th>
+            <th>Isolation sample type</th>
+            <th>Isolation environment</th>
+            <th>Isolation location</th>
+            <th>Degradation extrapolated from enzyme</th>
+            <th>Paper id</th>
+            <th>Lineage</th>
+        </tr>
+        {% for row in parts_table %}
+        <tr>
+            <td>{{ row['Microorganism'] }}</td>
+            <td>{{ row['Tax ID'] }}</td>
+            <td>{{ row['Plastic'] }}</td>
+            <td>{{ row['Ref'] }}</td>
+            <td>{{ row['Enzyme'] }}</td>
+            <td>{{ row['Enzyme ID'] }}</td>
+            <td>{{ row['Database Enzyne Name'] }}</td>
+            <td>{{ row['Gene'] }}</td>
+            <td>{{ row['GenbankID'] }}</td>
+            <td>{{ row['Sequence'] }}</td>
+            <td>{{ row['Year'] }}</td>
+            <td>{{ row['Evidence'] }}</td>
+            <td>{{ row['Plastic used'] }}</td>
+            <td>{{ row['Manufacturer'] }}</td>
+            <td>{{ row['Analitical grade'] }}</td>
+            <td>{{ row['Thermophilic conditions'] }}</td>
+            <td>{{ row['Isolation sample type'] }}</td>
+            <td>{{ row['Isolation environment'] }}</td>
+            <td>{{ row['Isolation location'] }}</td>
+            <td>{{ row['Degradation extrapolated from enzyme'] }}</td>
+            <td>{{ row['Paper id'] }}</td>
+            <td>{{ row['Lineage'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+</body>
+</html>
