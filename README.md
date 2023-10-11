@@ -40,10 +40,10 @@ The web app will be accessible at http://localhost:5000 in your web browser.
 ![Homepage](src/homepage.jpg)
 
 * Dropdown:
-![Menu](src/dropdown.jpg)
+![Menu](src/Dropdown.jpg)
 
 * Table:
-![table](src/table.jpg)
+![table](src/table.png)
 
 
 
@@ -56,8 +56,7 @@ Click the "Search" button.
 The application will display a table with the relevant information based on your search criteria.
 
 ## Technology Stack
-<img src="https://img.icons8.com/color/48/000000/python.png" title="Python" >
-<img src="https://img.icons8.com/color/48/000000/flask.png" title="Flask" >
+<img src="https://img.icons8.com/color/48/000000/python.png" title="Python" > <img src="https://img.icons8.com/color/48/000000/flask.png" title="Flask" >
 
 ## Project Structure
 The project directory structure is as follows:
