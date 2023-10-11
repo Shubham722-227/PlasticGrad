@@ -40,7 +40,7 @@ The web app will be accessible at http://localhost:5000 in your web browser.
 ![Homepage](src/homepage.jpg)
 
 * Dropdown:
-![Menu](src/Dropdown.jpg)
+![Menu](src/Dropdown.png)
 
 * Table:
 ![table](src/table.png)
