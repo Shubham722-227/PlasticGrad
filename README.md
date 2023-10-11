@@ -72,6 +72,9 @@ plastic-degraders-app/
 * app.py: The main Flask application file.
 * degraders_list.tsv: The TSV file containing plastic degraders data.
 * templates/degraders.html: The HTML template for rendering the web page.
+* 
+### if you like what i do, maybe consider buying me a coffee/tea 🥺👉👈
+<a href="https://www.buymeacoffee.com/techs4shubq" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-red.png" alt="Buy Me A Coffee" width="150" ></a>
 
 ## Authors
 
